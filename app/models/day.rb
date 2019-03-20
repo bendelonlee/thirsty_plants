@@ -4,7 +4,7 @@ class Day
     days_from_now = args[:days_from_now] || 7
     user = args[:user]
     ((0 - days_ago) .. days_from_now).map do |i|
-      Day.new(Date.parse(i.days.from_now.localtime.to_s), user)
+      Day.new((Date.today + i.days), user)
     end
   end
 
